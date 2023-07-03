@@ -120,22 +120,11 @@ class Login:
 
 
 ######## BOTAO CADASTRO
-        def cadastrar(event):
-            tela_cadastro()
 
 
         self.cadastrar_text = self.canvas.create_text(180, 540, text = 'Não tem uma conta? Cadastre-se', font = ("Lemon Milk", "13", "bold"), justify = 'center', fill = 'green')
         self.canvas.tag_bind(self.cadastrar_text, '<Button-1>', cadastrar)
         self.canvas.tag_bind(self.cadastrar_text,'<Enter>', cursor_in), self.canvas.tag_bind(self.cadastrar_text,'<Leave>', cursor_out)
-
-
-class Signup:
-    def __init__(self, main = None):
-        self.canvas = Canvas(main, width= 360, height = 640)
-        self.canvas.pack()
-        
-        cadastro = Signup(root)
-        
 
 def tela_cadastro():
     login = Login(None)
